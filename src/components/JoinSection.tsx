@@ -118,10 +118,6 @@ const JoinSection = () => {
                   </Button>
                   
                   {error && <p className="text-red-600 text-center text-sm">{error}</p>}
-                  
-                  <p className="text-xs text-center text-gray-600">
-                    By signing up, you agree to our Terms of Service and Privacy Policy.
-                  </p>
                 </form>
               )}
             </div>
