@@ -48,7 +48,7 @@ const ActivityTabs: React.FC<ActivityTabsProps> = ({ activities }) => {
                 description={
                   activity.id === 'spelling' ? 'They fix spellings inside the story.' :
                   activity.id === 'synonyms' ? 'They choose answers—and learn why they fit.' :
-                  activity.id === 'stories' ? 'Here, kids don’t read. They live.' :
+                  activity.id === 'stories' ? 'They live the story, not just read it.' :
                   activity.id === 'diary' ? 'They write notes. They reflect. They learn—without even realizing they’re learning.' :
                   activity.description
                 }
@@ -65,7 +65,7 @@ const ActivityTabs: React.FC<ActivityTabsProps> = ({ activities }) => {
                 description={
                   activity.id === 'spelling' ? 'They fix spellings inside the story.' :
                   activity.id === 'synonyms' ? 'They choose answers—and learn why they fit.' :
-                  activity.id === 'stories' ? 'Here, kids don’t read. They live.' :
+                  activity.id === 'stories' ? 'They live the story, not just read it.' :
                   activity.id === 'diary' ? 'They write notes. They reflect. They learn—without even realizing they’re learning.' :
                   activity.description
                 }

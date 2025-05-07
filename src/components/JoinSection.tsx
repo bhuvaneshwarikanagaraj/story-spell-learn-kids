@@ -83,14 +83,14 @@ const JoinSection = () => {
         <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 max-w-4xl mx-auto border border-kids-violet-200">
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">We're Launching Soon!</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">Get Started Now</h2>
               <p className="text-gray-700 mb-6">
-                Register for early access and updates to our interactive platform for spelling, reading, and writing through stories and games.
+              Parents and teachers are already seeing remarkable improvements in children's literacy skills and enthusiasm for reading. Sign up today to give your child the gift of confident reading and writing!
               </p>
             </div>
             
             <div className="bg-gradient-to-br from-kids-blue-100 to-kids-violet-100 p-6 rounded-xl">
-              <h3 className="text-xl font-bold mb-4 text-kids-violet-500">Register Now</h3>
+              <h3 className="text-xl font-bold mb-4 text-kids-violet-500">Register Here</h3>
               
               {alreadyRegistered ? (
                 <div className="flex flex-col items-center justify-center bg-gradient-to-br from-kids-blue-100 to-kids-violet-100 p-8 rounded-xl shadow-lg border-2 border-kids-violet-200 animate-fade-in">

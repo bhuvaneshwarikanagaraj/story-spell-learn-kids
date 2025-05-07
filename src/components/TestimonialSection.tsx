@@ -12,7 +12,7 @@ const testimonials = [
   {
     name: 'Arunika (Student)',
     avatar: <Smile className="h-8 w-8 text-kids-violet-500" />,
-    quote: 'I struggle with spelling, but I really love to play spelling game in the story.',
+    quote: "I used to get spellings wrong a lot, but now I like fixing them because it's part of the story!",
     bg: 'bg-gradient-to-br from-kids-violet-100 to-kids-green-100'
   }
 ];

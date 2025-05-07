@@ -11,7 +11,7 @@ const SneakPeekSection = () => {
   const activities: ActivityType[] = [
     {
       id: "stories",
-      title: "Interactive Stories",
+      title: "Interactive Story",
       description: "Immersive narratives where children make choices that shape the story.",
       icon: <BookOpen className="h-5 w-5 mr-2" />,
       image: <StoryPhoneMockup />
@@ -25,7 +25,7 @@ const SneakPeekSection = () => {
     },
     {
       id: "synonyms",
-      title: "Synonyms Challenge",
+      title: "Word Match Challenge",
       description: "Expand vocabulary by learning words with similar meanings.",
       icon: <BookMarked className="h-5 w-5 mr-2" />,
       image: <SynonymsPhoneMockup />
