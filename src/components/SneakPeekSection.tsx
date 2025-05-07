@@ -2,8 +2,9 @@
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card } from "@/components/ui/card";
-import { BookOpen, SpellCheck, BookText } from "lucide-react";
+import { BookOpen, SpellCheck, BookText, ImageIcon } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { PhoneMockup } from "@/components/PhoneMockup";
 
 // Create separate components for phone mockups to improve readability
 const StoryPhoneMockup = () => (
@@ -29,11 +30,11 @@ const StoryPhoneMockup = () => (
           </div>
           
           <div className="h-[180px] bg-gray-50 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-            <div className="w-full h-full bg-gradient-to-r from-kids-blue-200 to-kids-violet-200 p-4 flex items-center justify-center">
-              <div className="w-24 h-24 bg-white/30 rounded-full flex items-center justify-center">
-                <div className="w-16 h-16 bg-white/50 rounded-full animate-pulse-soft"></div>
-              </div>
-            </div>
+            <img 
+              src="https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=400&h=300&auto=format&fit=crop" 
+              alt="Space adventure scene" 
+              className="w-full h-full object-cover"
+            />
           </div>
           
           <div className="bg-white p-3 rounded-lg shadow-sm">
@@ -81,6 +82,14 @@ const SpellingPhoneMockup = () => (
           <div className="flex items-center justify-between">
             <h3 className="text-sm font-bold">Spell Master</h3>
             <div className="bg-kids-green-400 text-white text-[10px] px-2 py-1 rounded-full">Level 3</div>
+          </div>
+          
+          <div className="h-[100px] bg-gray-50 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+            <img 
+              src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238?q=80&w=400&h=200&auto=format&fit=crop" 
+              alt="Magical castle" 
+              className="w-full h-full object-cover"
+            />
           </div>
           
           <div className="p-3 bg-white/70 backdrop-blur-sm rounded-lg">
@@ -150,8 +159,16 @@ const DiaryPhoneMockup = () => (
             <div className="bg-kids-violet-400 text-white text-[10px] px-2 py-1 rounded-full">Day 5</div>
           </div>
           
+          <div className="h-[100px] bg-gray-50 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+            <img 
+              src="https://images.unsplash.com/photo-1551651653-c5186a1fbba2?q=80&w=400&h=200&auto=format&fit=crop" 
+              alt="Treasure map and compass" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+          
           <p className="font-medium text-xs">Today's Adventure:</p>
-          <div className="bg-white p-3 rounded-md shadow-sm min-h-[180px] border border-gray-200">
+          <div className="bg-white p-3 rounded-md shadow-sm min-h-[120px] border border-gray-200">
             <p className="text-gray-500 italic text-xs mb-2">Write about your adventure with Captain Leo and the treasure hunt...</p>
             <div className="border-b border-gray-200 mb-2"></div>
             <p className="text-xs text-gray-700">Today Captain Leo and I discovered a hidden cave behind the waterfall. Inside we found ancient symbols that might help us find the lost treasure. I think the symbols mean we should...</p>
