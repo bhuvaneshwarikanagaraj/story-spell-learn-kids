@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,28 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom theme colors
+				"kids-blue": {
+					100: "#E6F4FF",
+					200: "#B8E2FF", 
+					300: "#89CFF0",
+					400: "#7DB9DE",
+					500: "#6495ED"
+				},
+				"kids-violet": {
+					100: "#F0E6FF",
+					200: "#D8BFD8",
+					300: "#B19CD9",
+					400: "#9370DB",
+					500: "#8A2BE2"
+				},
+				"kids-green": {
+					100: "#E7FFE6",
+					200: "#CCFFCC",
+					300: "#98FB98",
+					400: "#90EE90",
+					500: "#ADFF2F"
 				}
 			},
 			borderRadius: {
@@ -84,12 +107,37 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'pulse-soft': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.8' }
+				},
+				'bounce-gentle': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-5px)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 6s ease-in-out infinite',
+				'pulse-soft': 'pulse-soft 3s ease-in-out infinite',
+				'bounce-gentle': 'bounce-gentle 2s ease-in-out infinite'
+			},
+			fontFamily: {
+				'display': ['Nunito', 'sans-serif'],
+				'body': ['Roboto', 'sans-serif']
+			},
+			backgroundImage: {
+				'hero-pattern': "url('/src/assets/hero-bg.svg')",
+				'gradient-blue-violet': 'linear-gradient(90deg, hsla(186, 33%, 94%, 1) 0%, hsla(216, 41%, 79%, 1) 100%)',
+				'gradient-violet-green': 'linear-gradient(90deg, hsla(277, 75%, 84%, 1) 0%, hsla(134, 36%, 53%, 1) 100%)',
+				'gradient-green-blue': 'linear-gradient(90deg, hsla(139, 70%, 75%, 1) 0%, hsla(216, 41%, 79%, 1) 100%)'
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
