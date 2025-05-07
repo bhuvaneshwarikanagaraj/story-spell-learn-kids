@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ImageIcon } from "lucide-react";
 
@@ -6,64 +5,50 @@ interface PhoneMockupProps {
   children?: React.ReactNode;
   image?: string;
   imageAlt?: string;
-  bgGradient?: string;
-  showEmptyImagePlaceholder?: boolean;
-  title?: string;
 }
 
 export const PhoneMockup: React.FC<PhoneMockupProps> = ({
-  children,
   image,
   imageAlt = "App screen image",
-  bgGradient = "from-kids-blue-100 to-kids-violet-100",
-  showEmptyImagePlaceholder = false,
-  title = "Kids Can Read App"
 }) => {
   return (
-    <div className="relative mx-auto">
+    <div className="relative mx-auto transform hover:scale-105 transition-transform duration-300">
       {/* Phone frame */}
-      <div className="w-[280px] h-[560px] bg-gray-800 rounded-[36px] p-3 shadow-xl">
-        {/* Phone screen */}
-        <div className={`w-full h-full bg-gradient-to-br ${bgGradient} rounded-[28px] overflow-hidden relative`}>
-          {/* Status bar */}
-          <div className="h-8 w-full bg-black/10 flex items-center justify-between px-4">
-            <span className="text-[10px] text-gray-700 font-medium">9:41</span>
-            <div className="flex items-center space-x-1">
-              <div className="w-3 h-3 rounded-full bg-gray-700"></div>
-              <div className="w-3 h-3 rounded-full bg-gray-700"></div>
-            </div>
-          </div>
-          
-          {/* App content */}
-          <div className="p-4 space-y-4">
-            {title && (
-              <div className="flex items-center justify-between">
-                <h3 className="text-sm font-bold">{title}</h3>
-              </div>
-            )}
-            
-            {/* Image section */}
-            {(image || showEmptyImagePlaceholder) && (
-              <div className="h-[180px] bg-gray-50 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-                {image ? (
-                  <img 
-                    src={image}
-                    alt={imageAlt}
-                    className="w-full h-full object-cover"
-                  />
-                ) : (
-                  <div className="w-full h-full flex flex-col items-center justify-center bg-gray-100">
-                    <ImageIcon className="h-10 w-10 text-gray-400 mb-2" />
-                    <p className="text-xs text-gray-500">Image placeholder</p>
-                  </div>
-                )}
-              </div>
-            )}
-            
-            {/* Custom content */}
-            {children}
+      <div className="w-[240px] h-[480px] bg-[#1C1C1E] rounded-[36px] p-2 shadow-2xl relative">
+        {/* Dynamic Island / Notch */}
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[90px] h-[25px] bg-black rounded-b-[16px] z-20">
+          <div className="absolute top-[8px] left-[50%] transform -translate-x-1/2 flex space-x-2">
+            <div className="w-1.5 h-1.5 bg-gray-600 rounded-full"></div>
+            <div className="w-1.5 h-1.5 bg-gray-600 rounded-full"></div>
           </div>
         </div>
+        
+        {/* Side buttons */}
+        <div className="absolute -left-1 top-[90px] w-[3px] h-[60px] bg-[#2A2A2C] rounded-l-lg"></div>
+        <div className="absolute -right-1 top-[80px] w-[3px] h-[70px] bg-[#2A2A2C] rounded-r-lg"></div>
+        <div className="absolute -right-1 top-[170px] w-[3px] h-[30px] bg-[#2A2A2C] rounded-r-lg"></div>
+        
+        {/* Phone screen */}
+        <div className="w-full h-full rounded-[32px] overflow-hidden relative bg-gradient-to-br from-kids-blue-100 to-kids-violet-100">
+          {image ? (
+            <img 
+              src={image}
+              alt={imageAlt}
+              className="w-full h-full object-cover rounded-[32px]"
+              style={{ display: 'block' }}
+            />
+          ) : (
+            <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-kids-blue-100 to-kids-violet-100">
+              <ImageIcon className="h-8 w-8 text-gray-400 mb-2" />
+              <p className="text-xs text-gray-500">Image placeholder</p>
+            </div>
+          )}
+        </div>
+      </div>
+      
+      {/* Reflection effect */}
+      <div className="absolute inset-0 rounded-[36px] pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent opacity-50"></div>
       </div>
     </div>
   );

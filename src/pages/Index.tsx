@@ -1,9 +1,9 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
-import BenefitsSection from '@/components/BenefitsSection';
+
 import SneakPeekSection from '@/components/SneakPeekSection';
+import TestimonialSection from '@/components/TestimonialSection';
 import JoinSection from '@/components/JoinSection';
 import Footer from '@/components/Footer';
 
@@ -12,8 +12,8 @@ const Index = () => {
     <div className="min-h-screen">
       <Navbar />
       <HeroSection />
-      <BenefitsSection />
       <SneakPeekSection />
+      <TestimonialSection />
       <JoinSection />
       <Footer />
     </div>
