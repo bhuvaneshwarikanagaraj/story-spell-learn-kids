@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="flex flex-col items-start">
             <div className="flex items-center space-x-2">
               <BookOpen className="h-6 w-6" />
-              <span className="font-display font-bold text-xl">Kids Can Read</span>
+              <span className="font-display font-bold text-xl">word360</span>
             </div>
           </div>
           
@@ -35,7 +35,7 @@ const Footer = () => {
         </div>
         
         <div className="mt-10 pt-6 border-t border-kids-violet-400 text-center text-sm text-kids-violet-200">
-          <p>© 2025 Kids Can Read. All rights reserved.</p>
+          <p>© 2025 word360. All rights reserved.</p>
         </div>
       </div>
     </footer>

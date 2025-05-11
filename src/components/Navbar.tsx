@@ -33,7 +33,7 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center space-x-2">
           <BookOpen className="h-8 w-8 text-kids-violet-400" />
-          <span className="font-display font-bold text-2xl text-kids-violet-500">Kids Can <span className="text-kids-blue-400">Read</span></span>
+          <span className="font-display font-bold text-2xl text-kids-violet-500">word<span className="text-kids-blue-400">360</span></span>
         </div>
         
         <div className="hidden md:flex space-x-6 items-center">
